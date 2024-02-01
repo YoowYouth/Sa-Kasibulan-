@@ -27,17 +27,17 @@
 
         nav {
             background-color: rgba(255, 255, 255, 0.7); /* White with 0.7 opacity */
-            color: #fff;
+            color: #000; /* Black font color */
             text-align: center;
             padding: 0.5em;
-            position: relative; /* Changed to relative */
+            position: fixed;
             width: 100%;
             z-index: 1000;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, opacity 0.3s ease;
         }
 
         nav a {
-            color: #fff;
+            color: #000; /* Black font color */
             text-decoration: none;
             padding: 1em;
             background-color: rgba(255, 255, 255, 0.3); /* White with 0.3 opacity */
@@ -57,6 +57,7 @@
             border-radius: 8px;
             z-index: 1;
             position: relative;
+            margin-top: 70px; /* Adjusted to account for the fixed navigation */
         }
 
         article {
@@ -135,8 +136,10 @@
             var nav = document.querySelector('nav');
             if (scrollPosition > 50) {
                 nav.style.backgroundColor = 'rgba(255, 255, 255, 0.9)';
+                nav.style.opacity = 1;
             } else {
                 nav.style.backgroundColor = 'rgba(255, 255, 255, 0.7)';
+                nav.style.opacity = 0.9; /* Adjusted opacity for a slight transparency effect */
             }
         };
     </script>
