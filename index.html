@@ -33,6 +33,7 @@
             position: fixed;
             width: 100%;
             z-index: 1000;
+            transition: top 0.3s ease; /* Added transition for smooth hiding/showing */
         }
 
         nav a {
@@ -121,10 +122,20 @@
     </footer>
 
     <script>
+        var prevScrollpos = window.pageYOffset;
+
         window.onscroll = function () {
-            var scrollPosition = document.documentElement.scrollTop;
+            var currentScrollPos = window.pageYOffset;
             var header = document.querySelector('header');
-            header.style.backgroundPositionY = -scrollPosition * 0.3 + 'px';
+            var nav = document.querySelector('nav');
+
+            if (prevScrollpos > currentScrollPos) {
+                nav.style.top = '0';
+            } else {
+                nav.style.top = '-70px';
+            }
+
+            prevScrollpos = currentScrollPos;
         };
     </script>
 </body>
