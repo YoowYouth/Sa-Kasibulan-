@@ -19,39 +19,30 @@
             background-size: cover; /* Set to 'cover' to maintain image proportions and cover the entire header */
             color: #fff;
             text-align: center;
-            padding: 4em 0;
+            padding: 0; /* Removed padding */
             position: relative;
             transition: background-position 0.3s ease;
-            margin-bottom: 2em; /* Added margin to create space for navigation */
+            height: 100vh; /* Set header height to full viewport height */
         }
 
         nav {
-            background-color: rgba(255, 255, 255, 0.7); /* White with 0.7 opacity */
-            color: #000; /* Black font color */
+            background: linear-gradient(to right, darkgreen, yellowgreen); /* Dark green to yellow-green gradient */
+            color: #fff;
             text-align: center;
-            padding: 0.5em;
+            padding: 0.5em; /* Adjusted padding */
             position: fixed;
             width: 100%;
             z-index: 1000;
-            transition: background-color 0.3s ease, opacity 0.3s ease;
         }
 
         nav a {
-            color: #000; /* Black font color */
+            color: #fff;
             text-decoration: none;
-            padding: 1em;
-            background-color: rgba(255, 255, 255, 0.3); /* White with 0.3 opacity */
-            border-radius: 5px;
-            margin: 0 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        nav a:hover {
-            background-color: rgba(255, 255, 255, 0.5); /* White with 0.5 opacity on hover */
+            padding: 0.5em; /* Adjusted padding */
         }
 
         section {
-            margin: 1em;
+            margin: 0; /* Removed margin */
             padding: 1em;
             background-color: #fff;
             border-radius: 8px;
@@ -131,15 +122,6 @@
             var scrollPosition = document.documentElement.scrollTop;
             var header = document.querySelector('header');
             header.style.backgroundPositionY = -scrollPosition * 0.3 + 'px';
-
-            var nav = document.querySelector('nav');
-            if (scrollPosition > 50) {
-                nav.style.backgroundColor = 'rgba(255, 255, 255, 0.9)';
-                nav.style.opacity = 1;
-            } else {
-                nav.style.backgroundColor = 'rgba(255, 255, 255, 0.7)';
-                nav.style.opacity = 0.9; /* Adjusted opacity for a slight transparency effect */
-            }
         };
     </script>
 </body>
