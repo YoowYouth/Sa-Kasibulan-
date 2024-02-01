@@ -25,7 +25,7 @@
         }
 
         nav {
-            background-color: #444;
+            background-color: rgba(255, 255, 255, 0.7); /* White with 0.7 opacity */
             color: #fff;
             text-align: center;
             padding: 0.5em;
@@ -40,6 +40,14 @@
             color: #fff;
             text-decoration: none;
             padding: 1em;
+            background-color: rgba(255, 255, 255, 0.3); /* White with 0.3 opacity */
+            border-radius: 5px;
+            margin: 0 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.5); /* White with 0.5 opacity on hover */
         }
 
         section {
@@ -126,12 +134,6 @@
 
             var nav = document.querySelector('nav');
             if (scrollPosition > 50) {
-                nav.style.backgroundColor = '#333';
+                nav.style.backgroundColor = 'rgba(255, 255, 255, 0.9)';
             } else {
-                nav.style.backgroundColor = '#444';
-            }
-        };
-    </script>
-</body>
-
-</html>
+                nav.style.backgroundColor = 'rgb
