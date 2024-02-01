@@ -22,6 +22,7 @@
             padding: 4em 0;
             position: relative;
             transition: background-position 0.3s ease;
+            margin-bottom: 2em; /* Added margin to create space for navigation */
         }
 
         nav {
@@ -29,9 +30,8 @@
             color: #fff;
             text-align: center;
             padding: 0.5em;
-            position: fixed;
+            position: relative; /* Changed to relative */
             width: 100%;
-            top: 0;
             z-index: 1000;
             transition: background-color 0.3s ease;
         }
@@ -79,16 +79,16 @@
 </head>
 
 <body>
+    <header>
+        <!-- No heading title as you requested -->
+    </header>
+
     <nav>
         <a href="../index.html#home">Home</a>
         <a href="../index.html#articles">Articles</a>
         <a href="../index.html#about">About Us</a>
         <a href="../index.html#contact">Contact</a>
     </nav>
-
-    <header>
-        <!-- No heading title as you requested -->
-    </header>
 
     <section id="home">
         <h2>Welcome to Sa Kasibulan - Your Source for School News</h2>
@@ -136,4 +136,10 @@
             if (scrollPosition > 50) {
                 nav.style.backgroundColor = 'rgba(255, 255, 255, 0.9)';
             } else {
-                nav.style.backgroundColor = 'rgb
+                nav.style.backgroundColor = 'rgba(255, 255, 255, 0.7)';
+            }
+        };
+    </script>
+</body>
+
+</html>
