@@ -1,42 +1,31 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+/* Style for article section */
+article {
+    margin-bottom: 20px;
+    border: 1px solid #ddd; /* Add a border for separation */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Add some padding for spacing */
+    background-color: #fff; /* White background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1em;
+article h3 {
+    color: #333;
 }
 
-nav {
-    background-color: #444;
-    color: #fff;
-    text-align: center;
-    padding: 0.5em;
+article img {
+    max-width: 100%; /* Ensure images don't overflow their container */
+    border-radius: 8px; /* Rounded corners for images */
+    margin-bottom: 10px; /* Add space below images */
 }
 
-nav a {
-    color: #fff;
-    text-decoration: none;
-    padding: 1em;
+article p {
+    line-height: 1.6; /* Improve readability with slightly increased line height */
+    color: #555; /* Use a slightly darker color for text */
 }
 
-section {
-    margin: 1em;
-    padding: 1em;
-    background-color: #fff;
-    border-radius: 8px;
+/* Add hover effect to articles */
+article:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Enhance box shadow on hover */
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1em;
-    margin-top: 1em;
-    width: 100%;
-}
+/* Additional styles can be added based on your design preferences */
