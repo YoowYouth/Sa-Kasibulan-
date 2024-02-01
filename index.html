@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sa Kasibulan - School Paper</title>
-    <!-- Correct placement of the link tag for the stylesheet -->
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles.css"> <!-- Adjust the path based on your file structure -->
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -16,11 +15,13 @@
         }
 
         header {
-            /* Use a background image with fading effect */
             background: url('images/headings.png') center/cover no-repeat;
+            background-size: 100%; /* Adjust this value to fit your design */
             color: #fff;
             text-align: center;
-            padding: 1em;
+            padding: 4em 0;
+            position: relative;
+            transition: background-position 0.3s ease;
         }
 
         nav {
@@ -28,6 +29,11 @@
             color: #fff;
             text-align: center;
             padding: 0.5em;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: background-color 0.3s ease;
         }
 
         nav a {
@@ -41,6 +47,16 @@
             padding: 1em;
             background-color: #fff;
             border-radius: 8px;
+            z-index: 1;
+            position: relative;
+        }
+
+        article {
+            margin-bottom: 20px;
+        }
+
+        article p {
+            margin-bottom: 15px; /* Adjust as needed */
         }
 
         footer {
@@ -48,24 +64,23 @@
             color: #fff;
             text-align: center;
             padding: 1em;
-            margin-top: 1em;
+            margin-top: 1em; /* Remove 'position: absolute;' and adjust margin-top */
             width: 100%;
         }
     </style>
 </head>
 
 <body>
-    <header>
-        <h1>Sa Kasibulan - School Paper</h1>
-    </header>
-
     <nav>
-        <!-- Change the href to your main index file or provide proper section IDs -->
         <a href="../index.html#home">Home</a>
         <a href="../index.html#articles">Articles</a>
         <a href="../index.html#about">About Us</a>
         <a href="../index.html#contact">Contact</a>
     </nav>
+
+    <header>
+        <h1>Sa Kasibulan - School Paper</h1>
+    </header>
 
     <section id="home">
         <h2>Welcome to Sa Kasibulan - Your Source for School News</h2>
@@ -102,6 +117,21 @@
     <footer>
         <p>&copy; 2024 Sa Kasibulan - School Paper</p>
     </footer>
+
+    <script>
+        window.onscroll = function () {
+            var scrollPosition = document.documentElement.scrollTop;
+            var header = document.querySelector('header');
+            header.style.backgroundPositionY = -scrollPosition * 0.3 + 'px';
+
+            var nav = document.querySelector('nav');
+            if (scrollPosition > 50) {
+                nav.style.backgroundColor = '#333';
+            } else {
+                nav.style.backgroundColor = '#444';
+            }
+        };
+    </script>
 </body>
 
 </html>
