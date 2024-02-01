@@ -62,7 +62,8 @@
             color: #fff; /* Adjust the font color as needed */
             text-align: center;
             padding: 1em;
-            margin-top: 1em;
+            position: fixed;
+            bottom: 0;
             width: 100%;
         }
     </style>
@@ -129,7 +130,7 @@
                 footer.style.bottom = '0';
             } else {
                 nav.style.top = '-70px';
-                footer.style.bottom = '0'; // Adjust this value if needed
+                footer.style.bottom = '-70px'; // Adjust this value if needed
             }
 
             if (currentScrollPos === 0) {
