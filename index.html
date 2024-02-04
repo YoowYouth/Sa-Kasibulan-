@@ -7,6 +7,12 @@
     <title>Sa Kasibulan - School Paper</title>
     <link rel="stylesheet" href="../styles.css"> <!-- Adjust the path based on your file structure -->
     <style>
+        /* Reset some default styles */
+        body, h1, h2, h3, p {
+            margin: 0;
+            padding: 0;
+        }
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -15,33 +21,35 @@
         }
 
         header {
-            background: url('images/headings.png') center/cover no-repeat;
-            background-size: 100%; /* Adjust this value to fit your design */
+            background: url('images/headings.png') center/contain no-repeat;
+            background-size: auto 70px; /* Adjust this value to fit your design */
             color: #fff;
             text-align: center;
             padding: 4em 0;
             position: relative;
             height: 25vh; /* Adjust this value to match the navigation and footer height */
             transition: background-position 0.3s ease;
+            width: 100%; /* Set a specific width for the header */
         }
 
         nav {
             background: linear-gradient(to right, darkgreen, yellowgreen);
             color: #fff;
             text-align: center;
-            padding: 0.7em; /* Adjust the padding as needed (thinner) */
+            padding: 0.5em; /* Adjust the padding as needed (thinner) */
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
             transition: top 0.3s ease, background-color 0.3s ease;
-            height: 70px; /* Adjust this value as needed */
+            height: 50px; /* Adjust this value as needed */
         }
 
         nav a {
             color: #fff;
             text-decoration: none;
-            padding: 0.5em; /* Adjust the padding as needed */
+            padding: 0.3em; /* Adjust the padding as needed (thinner) */
+            font-size: 14px; /* Adjust the font size as needed */
         }
 
         section {
@@ -51,27 +59,73 @@
             border-radius: 8px;
         }
 
+        footer {
+            background: linear-gradient(to right, yellowgreen, darkgreen);
+            color: #fff;
+            text-align: center;
+            padding: 1em; /* Adjust the padding as needed */
+            margin-top: 1em;
+            width: 100%;
+            height: 70px; /* Match the height of the navigation */
+        }
+
+        /* Style for article section */
         article {
             margin-bottom: 20px;
         }
 
-        article p {
-            margin-bottom: 15px; /* Adjust as needed */
+        article h3 {
+            color: #333;
         }
 
-        footer {
-            background: linear-gradient(to right, yellowgreen, dark);
-            color: #fff;
+        /* Add responsive design styles */
+        @media only screen and (max-width: 600px) {
+            nav a {
+                display: block;
+                width: 100%;
+                text-align: left;
+            }
+
+            section {
+                margin: 0.5em;
+                padding: 0.5em;
+            }
+
+            footer {
+                position: relative;
+            }
+        }
+
+        /* Additional styles can be added based on your design preferences */
+        /* Add hover effect to navigation links */
+        nav a:hover {
+            background-color: #555;
+        }
+
+        /* Style for the home section */
+        #home {
             text-align: center;
-            padding: 1.5em; /* Adjust the padding as needed (thicker) */
-            margin-top: 1em;
-            width: 100%;
-            height: 70px; /* Match the height of the navigation */
+            padding: 2em;
+        }
+
+        /* Style for the about section */
+        #about {
+            background-color: #f9f9f9;
+        }
+
+        /* Style for the contact section */
+        #contact {
+            background-color: #f9f9f9;
+            padding-bottom: 2em;
         }
     </style>
 </head>
 
 <body>
+    <!-- Your HTML content goes here -->
+</body>
+
+</html>
     <nav>
         <a href="../index.html#home">Home</a>
         <a href="../index.html#articles">Articles</a>
@@ -89,7 +143,7 @@
     <section id="articles">
         <h2>Latest Articles</h2>
         <article>
-            <h3>𝐂𝐡𝐫𝐢𝐬𝐭𝐦𝐚𝐬 𝐏𝐚𝐫𝐭𝐲, 𝐌𝐚𝐬𝐚𝐲𝐚𝐧𝐠 𝐈𝐩𝐢𝐧𝐚𝐠𝐝𝐢𝐫𝐢𝐰𝐚𝐧𝐠 𝐧𝐠 𝐁𝐍𝐍𝐂𝐇𝐒</h3>
+            <h3>𝐂𝐡𝐫𝐢𝐬𝐭𝐦𝐚𝐬 𝐏𝐚𝐫𝐭𝐲, 𝐌𝐚𝐬𝐚𝐯𝐚𝐧𝐠 𝐈𝐩𝐢𝐧𝐚𝐠𝐝𝐢𝐫𝐢𝐰𝐚𝐧𝐠 𝐧𝐠 𝐁𝐍𝐍𝐂𝐇𝐒</h3>
             <p>Kasabay sa paparating na pasko, Idinaos ng Barotac Nuevo National Comprehensive High School (BNNCHS) ang kanilang Christmas Party...</p>
             <a href="articles/article-1.html">Full Article Here</a>
         </article>
@@ -128,7 +182,7 @@
                 nav.style.top = '0';
                 footer.style.bottom = '0';
             } else {
-                nav.style.top = '-70px';
+                nav.style.top = '-50px'; /* Adjusted to match the height of the nav bar */
                 footer.style.bottom = '0'; // Adjust this value if needed
             }
 
