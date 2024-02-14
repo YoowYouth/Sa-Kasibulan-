@@ -20,7 +20,22 @@ header {
     position: relative;
     height: 75vh; /* Adjust this value to match the navigation and footer height */
     transition: background-position 0.3s ease;
-    width: 100%; /* Set a specific width for the header */
+    <style>
+        img {
+            width: 100%;
+            height: auto; /* Maintain aspect ratio */
+            max-width: 100%; /* Ensure the image doesn't exceed its natural size */
+            display: block; /* Remove any default inline styles */
+            margin: auto; /* Center the image */
+                <style>
+        img {
+            width: 100%;
+            height: auto; /* Maintain aspect ratio */
+            max-width: 100%; /* Ensure the image doesn't exceed its natural size */
+            display: block; /* Remove any default inline styles */
+            margin: auto; /* Center the image */
+        }
+    </style>
 }
 
 nav {
